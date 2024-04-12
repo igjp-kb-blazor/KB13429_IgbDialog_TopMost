@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KB13429_IgbDialog_TopMost", "KB13429_IgbDialog_TopMost.csproj", "{A8C10E2A-3FDA-4B37-B9A5-8AB1E9FFA0A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8C10E2A-3FDA-4B37-B9A5-8AB1E9FFA0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C10E2A-3FDA-4B37-B9A5-8AB1E9FFA0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C10E2A-3FDA-4B37-B9A5-8AB1E9FFA0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C10E2A-3FDA-4B37-B9A5-8AB1E9FFA0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB7AD129-5E9E-4E5B-93BE-C8034528A33B}
+	EndGlobalSection
+EndGlobal

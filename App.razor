@@ -1,0 +1,56 @@
+﻿<div class="container vertical" style="display: flex;justify-content: center;">
+    <IgbButton @onclick="OnDialogShow" Variant=@ButtonVariant.Contained>商品を選ぶ</IgbButton>
+    <IgbDialog @ref="DialogRef" Title="カートに入れる商品を選んでください">
+        <IgbMultiColumnComboBox class="search-Product"
+                                Label="商品名"
+                                @ref="productComboBoxRef"
+                                DataSource="products"
+                                TextField="商品名"
+                                ValueField="@(new string[]{ "Code" })"
+                                Fields="@(new string[] { "型番", "商品名", "価格" })"
+                                OpenAsChild="true"
+                                IsFixed="true"/>
+        <IgbButton slot="footer" @onclick="OnDialogHide" Variant=@ButtonVariant.Flat>キャンセル</IgbButton>
+        <IgbButton slot="footer" @onclick="OnDialogHide" Variant=@ButtonVariant.Flat>OK</IgbButton>
+    </IgbDialog>
+</div>
+
+@code {
+    public IgbDialog? DialogRef;
+    IgbMultiColumnComboBox? productComboBoxRef;
+
+    public async Task OnDialogShow()
+    {
+        if (this.DialogRef != null)
+        {
+            await this.DialogRef.ShowAsync();
+        }
+    }
+
+    public async Task OnDialogHide()
+    {
+        if (this.DialogRef != null)
+        {
+            await this.DialogRef.HideAsync();
+        }
+    }
+
+    private class Product
+    {
+        public string 型番 { get; set; } = string.Empty;
+        public string 商品名 { get; set; } = string.Empty;
+        public string 価格 { get; set; } = string.Empty;
+    }
+
+    private List<Product>? products;
+    protected override void OnInitialized()
+    {
+        products = new List<Product>();
+        products.Add(new Product{型番 = "U01",商品名 = "a Phone",価格 = "$ 1,000",});
+        products.Add(new Product{型番 = "U02",商品名 = "b Phone",価格 = "$ 1,200",});
+        products.Add(new Product{型番 = "U03",商品名 = "c Phone",価格 = "$ 1,450",});
+        products.Add(new Product{型番 = "U04",商品名 = "d Phone",価格 =   "$ 900",});
+        products.Add(new Product{型番 = "U05",商品名 = "e Phone",価格 = "$ 2,000",});
+
+    }
+}
